@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,32 +19,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbw-dp-6VP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbw-dp-6VP">
                                 <rect key="frame" x="52" y="20" width="270" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="tFu-OH-fjd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-XA-01u">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image2 YAA" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-Pr-ouy">
+                                <rect key="frame" x="16" y="149" width="343" height="432"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-XA-01u">
                                 <rect key="frame" x="135" y="97" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="j5D-th-btm"/>
+                                </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessageButoon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RJj-OC-OOb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image2 YAA" translatesAutoresizingMaskIntoConstraints="NO" id="YB3-az-bZH">
+                                <rect key="frame" x="16" y="149" width="343" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkh-2k-xpm">
+                                <rect key="frame" x="16" y="149" width="343" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jbw-dp-6VP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Tq-ya-5v0"/>
+                            <constraint firstItem="Khv-Pr-ouy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ll3-db-yqb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Khv-Pr-ouy" secondAttribute="bottom" constant="86" id="Y6U-1y-UZK"/>
+                            <constraint firstItem="jbw-dp-6VP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="YSV-MO-KtL"/>
+                            <constraint firstItem="jbw-dp-6VP" firstAttribute="centerX" secondItem="5JU-XA-01u" secondAttribute="centerX" id="agB-lF-Tym"/>
+                            <constraint firstItem="5JU-XA-01u" firstAttribute="top" secondItem="jbw-dp-6VP" secondAttribute="bottom" constant="8" symbolic="YES" id="alm-ny-l5P"/>
+                            <constraint firstItem="5JU-XA-01u" firstAttribute="centerX" secondItem="Khv-Pr-ouy" secondAttribute="centerX" id="bnI-I5-SOr"/>
+                            <constraint firstItem="Khv-Pr-ouy" firstAttribute="top" secondItem="5JU-XA-01u" secondAttribute="bottom" constant="22" id="ded-R8-wjN"/>
+                            <constraint firstItem="Khv-Pr-ouy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hRx-eT-HS6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="awesomeImages" destination="Jkh-2k-xpm" id="PPT-MT-96g"/>
                         <outlet property="awesomeMessage" destination="jbw-dp-6VP" id="3gr-cF-djl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-79.710144927536234" y="132.88043478260872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image2 YAA" width="640" height="400"/>
+    </resources>
 </document>
